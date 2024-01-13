@@ -6,7 +6,7 @@ The default keybindings are:
 - `script-binding select-track`: `g-t`
 - `script-binding select-secondary-sub`: `g-j`
 - `script-binding select-chapter`: `g-c`
-- `script-binding sub-seek`: `g-s` (requires `ffmpeg` in `PATH`, or in the same directory as mpv on Windows)
+- `script-binding sub-seek`: `g-s` (requires `ffmpeg` in `PATH`, or in the same folder as mpv on Windows)
 
 The keybindings to navigate the options are:
 
