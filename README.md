@@ -1,5 +1,3 @@
-This depends on the unmerged https://github.com/mpv-player/mpv/pull/10282
-
 Use the console to select a playlist entry, track, chapter, or subtitle line to seek to by typing part of the desired option and/or by navigating the options with the keyboard.
 
 The default keybindings are:
