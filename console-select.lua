@@ -33,17 +33,33 @@ local function update_log()
     end
 
     if first_match_to_print > 1 then
-        log[1] = { text = '↑ (' .. (first_match_to_print - 1) .. ' hidden items)', style = '{\\1c&Hcccccc&}' }
+        log[1] = {
+            text = '↑ (' .. (first_match_to_print - 1) .. ' hidden items)',
+            style = '{\\1c&Hcccccc&}',
+            terminal_style = '\027[38;5;8m',
+        }
     end
 
     local last_match_to_print  = math.min(first_match_to_print + max_log_lines - 1, #matches)
 
     for i = first_match_to_print, last_match_to_print do
-        log[#log+1] = { text = matches[i].text, style = i == selected_match and '{\\1c&H2fbdfa&\\b1}' or '' }
+        if i == selected_match then
+            log[#log+1] = {
+                text = matches[i].text,
+                style = '{\\1c&H2fbdfa&\\b1}',
+                terminal_style = '\027[7m',
+            }
+        else
+            log[#log+1] = matches[i].text
+        end
     end
 
     if last_match_to_print < #matches then
-        log[#log+1] = { text = '↓ (' .. (#matches - last_match_to_print) .. ' hidden items)', style = '{\\1c&Hcccccc&}' }
+        log[#log+1] = {
+            text = '↓ (' .. (#matches - last_match_to_print) .. ' hidden items)',
+            style = '{\\1c&Hcccccc&}',
+            terminal_style = '\027[38;5;8m',
+        }
     end
 
     input.set_log(log)
