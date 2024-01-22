@@ -16,3 +16,5 @@ The keybindings to navigate the options are:
 - Scroll up one page: `Page up`, `Ctrl+b`
 
 `select-playlist` also binds `Ctrl+Shift+d` to removing the selected entry from the playlist.
+
+This currently requires git master for `mp.input` support.
