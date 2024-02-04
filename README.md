@@ -17,6 +17,6 @@ The keybindings to navigate the options are:
 
 `select-playlist` also binds `Ctrl+Shift+d` to removing the selected entry from the playlist.
 
-fuzzy finding is provided by https://github.com/swarn/fzy-lua.
+fuzzy finding is provided by [fzy-lua](https://github.com/swarn/fzy-lua).
 
 This currently requires git master for `mp.input` support.
