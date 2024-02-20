@@ -355,7 +355,7 @@ mp.add_forced_key_binding('g-c', 'select-chapter', function ()
                 chapters[i] = format_time(chapter.time) .. ' ' .. chapter.title
                 matches[i] = { text = chapters[#chapters], number = i }
 
-                if i == current_chapter then
+                if i - 1 == current_chapter then
                     selected_match = i
                 end
             end
