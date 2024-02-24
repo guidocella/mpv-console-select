@@ -5,6 +5,17 @@ local first_match_to_print = 1
 local global_margins
 local fzy = {}
 
+local options = {
+    scale = 1,
+    font = "",
+    font_size = 16,
+    border_size = 1,
+    case_sensitive = true,
+    history_dedup = true,
+    font_hw_ratio = 'auto',
+}
+require 'mp.options'.read_options(options, 'console')
+
 mp.observe_property('user-data/osc/margins', 'native', function(_, val)
     global_margins = val or { t = 0, b = 0 }
 end)
@@ -20,7 +31,7 @@ local function calculate_max_log_lines()
     local screeny_factor = 1 - global_margins.t - global_margins.b
 
     -- Subtract 3.5 lines for the input line and the (n hidden items) lines.
-    return math.floor(screeny * screeny_factor / mp.get_opt('console-font_size', 16) - 3.5)
+    return math.floor(screeny * screeny_factor / options.font_size - 3.5)
 end
 
 local function update_log()
