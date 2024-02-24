@@ -21,7 +21,7 @@ mp.observe_property('user-data/osc/margins', 'native', function(_, val)
 end)
 
 local function calculate_max_log_lines()
-    local screeny = mp.get_property_native('osd-height') / mp.get_property_native('display-hidpi-scale', 1)
+    local screeny = mp.get_property_native('osd-height') / mp.get_property_native('display-hidpi-scale', 1) / options.scale
 
     -- Terminal output.
     if screeny == 0 then
