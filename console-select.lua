@@ -25,7 +25,8 @@ local function calculate_max_log_lines()
 
     -- Terminal output.
     if screeny == 0 then
-        return 25
+        -- Subtract 4 lines for the input line, the status line and the (n hidden items) lines.
+        return mp.get_property_native('term-size/h', 29) - 4
     end
 
     local screeny_factor = 1 - global_margins.t - global_margins.b
