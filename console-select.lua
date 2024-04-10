@@ -235,7 +235,7 @@ mp.add_forced_key_binding('g-t', 'select-track', function ()
         opened = function ()
             for i, track in ipairs(tracks) do
                 track.text = track.type:sub(1, 1):upper() .. track.type:sub(2) .. ': ' ..
-                    (track.selected and '➜' or ' ') ..
+                    (track.selected and '●' or '○') ..
                     (track.title and ' ' .. track.title or '') ..
                     ' (' .. (
                         (track.lang and track.lang .. ' ' or '') ..
@@ -295,7 +295,7 @@ mp.add_forced_key_binding('g-j', 'select-secondary-sub', function ()
 
             for _, track in ipairs(mp.get_property_native('track-list')) do
                 if track.type == 'sub' then
-                    track.text = (track.selected and '➜' or ' ') ..
+                    track.text = (track.selected and '●' or '○') ..
                         (track.title and ' ' .. track.title or '') ..
                         ' (' .. (
                             (track.lang and track.lang .. ' ' or '') ..
