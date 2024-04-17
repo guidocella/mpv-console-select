@@ -19,4 +19,4 @@ The keybindings to navigate the options are:
 
 fuzzy finding is provided by [fzy-lua](https://github.com/swarn/fzy-lua).
 
-This currently requires git master for `mp.input` support.
+This requires mpv >= 0.38 for `mp.input` support.
