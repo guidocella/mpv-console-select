@@ -1,3 +1,5 @@
+This is archived due to being upstreamed into mpv.
+
 Use the console to select a playlist entry, track, chapter, or subtitle line to seek to by typing part of the desired option and/or by navigating the options with the keyboard.
 
 The default keybindings are:
